@@ -113,12 +113,12 @@ describe('CalculoComponent', () => {
   });
   //test con 1er número primo, fibonacci y el 2do triangular
 
-  it('11) Test método serie',()=>{
-    const fixture= TestBed.createComponent(CalculoComponent);
-    const app= fixture.componentInstance;   
-    const check= app.serie(1);
+  // it('11) Test método serie',()=>{
+  //   const fixture= TestBed.createComponent(CalculoComponent);
+  //   const app= fixture.componentInstance;   
+  //   const check= app.serie(1);
     
-    expect(check).toEqual(0.6666666666666666)
-  });
+  //   expect(check).toEqual(0.6666666666666666)
+  // });
 
 });
