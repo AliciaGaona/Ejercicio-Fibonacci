@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CalculoComponent } from '../calculo/calculo.component';
 
 @Component({
   selector: 'app-formulario-principal',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioPrincipalComponent implements OnInit {
 
-  constructor() { }
+  formIngresaNumero= new FormGroup({
+    numeroForm: new FormControl('', Validators.required)
+  })
+
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+  
+  setNumber(form:any){
+    console.log(form.numeroForm)
+    
   }
 
 }

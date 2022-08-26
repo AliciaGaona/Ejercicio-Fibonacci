@@ -1,1 +1,19 @@
-<p>formulario-principal works!</p>
+<div class="wrapper fadeInDown pt-4">
+    <div id="formContent"> 
+      <div class="fadeIn first pt-4">
+        <img src="assets/hand.jpg" />
+      </div>
+      <div class="container">
+        <form [formGroup]="formIngresaNumero" (ngSubmit)="setNumber(formIngresaNumero.value)">
+            <div class="col-12 pt-2">
+                <input min="1" type="number"  formControlName="numeroForm"  id="numeroForm" placeholder="Ingresa número" class="fadeIn second">
+            </div>  
+            <div class="col-12 pt-2">
+                <input type="submit" class="fadeIn fourth" value="Enviar">
+            </div>             
+        </form>
+     </div>     
+    </div>
+</div>
+
+<input min="1" type="text"  formControlName="numeroForm"  id="numeroForm" class="fadeIn second">

@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FormularioPrincipalComponent } from './componentes/formulario-principal/formulario-principal.component';
 import { VistaPrincipalComponent } from './componentes/vista-principal/vista-principal.component';
 import { CalculoComponent } from './componentes/calculo/calculo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './componentesGenerales/header/header.component';
 
 @NgModule({
@@ -19,7 +19,8 @@ import { HeaderComponent } from './componentesGenerales/header/header.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
