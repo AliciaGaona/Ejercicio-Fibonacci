@@ -48,9 +48,8 @@ export class CalculoComponent implements OnInit {
     let j = 1, numeroTriangular = 1;
     const numerosTrianguloArray=[];
         for (let i = 1; i <= cantidad; i++)
-        {
-            j = j + 1;
-            numeroTriangular = numeroTriangular + j;
+        {          
+            numeroTriangular = (cantidad* (cantidad+1))/2 
             numerosTrianguloArray.push(numeroTriangular);
         }
     //const numeroTriangular=3
@@ -79,6 +78,15 @@ export class CalculoComponent implements OnInit {
     return num !== 1;
   }
 
+
+  validaTriangulo(num:number){
+    for (var i = 2; i < num; i++) { //números primos comienzan a partir de dos
+      if (num % i == 0) {
+        return false;
+      }
+    }
+    return num != 1;
+  }
 
 
 }
