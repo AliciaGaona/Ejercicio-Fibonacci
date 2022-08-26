@@ -51,5 +51,14 @@ describe('CalculoComponent', () => {
     const operacionSerie= (numeroFibonacci*n/numeroTriangular*n)*numeroPrimo
     expect(operacionSerie).toEqual(6)
   });
+
+  it('4) Test numero natural 4',()=>{
+    const n=4
+    const numeroFibonacci=1
+    const numeroTriangular=3
+    const numeroPrimo=2 
+    const operacionSerie= (numeroFibonacci*n/numeroTriangular*n)*numeroPrimo
+    expect(operacionSerie).toEqual(10.666666666666666)
+  });
   
 });
