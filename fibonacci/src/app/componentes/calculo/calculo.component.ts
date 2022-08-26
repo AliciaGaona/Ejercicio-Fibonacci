@@ -78,15 +78,4 @@ export class CalculoComponent implements OnInit {
     return num !== 1;
   }
 
-
-  validaTriangulo(num:number){
-    for (var i = 2; i < num; i++) { //números primos comienzan a partir de dos
-      if (num % i == 0) {
-        return false;
-      }
-    }
-    return num != 1;
-  }
-
-
 }
