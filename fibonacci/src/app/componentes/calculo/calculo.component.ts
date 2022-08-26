@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculoComponent implements OnInit {
 
+  num =2
   constructor() { }
 
   ngOnInit(): void {
@@ -17,18 +18,45 @@ export class CalculoComponent implements OnInit {
     const numeroFibonacci=this.getNumberTriangular()
     const numeroTriangular=this.getNumberPrimo()
     const numeroPrimo=this.getNumberFibonacci()
-    const operacionSerie=(numeroFibonacci*n/numeroTriangular*n)*numeroPrimo
+    // const numeroFibonacci=1
+    // const numeroTriangular=3
+    // const numeroPrimo=2 
+    const operacion1=numeroFibonacci*n/numeroTriangular*n
+    const operacionSerie= operacion1*numeroPrimo
+    // console.log(n,numeroFibonacci,numeroTriangular,numeroPrimo)
     return operacionSerie
   }
 
+  getNumberFibonacci(){
+    const numeroFibonacci=1
+    return numeroFibonacci
+  }
+
   getNumberTriangular(){
-    return 3
+    const numeroTriangular=3
+    return numeroTriangular
   }
   getNumberPrimo(){
-    return 2
+  const numerosPrimosArray = [];
+  const cantidad=this.num//cantidad de numeros primos que tendrá el array
+
+  for ( let j = 2;j < cantidad; j++) { //números primos comienzan a partir de dos
+    if (this.validaPrimo(j)) {
+      numerosPrimosArray.push(j);//generando array con números primos
+    }    
   }
-  getNumberFibonacci(){
-    return 1
+  //const numeroPrimo=2
+    return numerosPrimosArray[0]//forzando a que regrese el primer número del array=>2
   }
+
+  validaPrimo(num:number) {
+    for (var i = 2; i < num; i++) { //números primos comienzan a partir de dos
+      if (num % i === 0) {
+        return false;
+      } 
+    }
+    return num !== 1;
+  }
+ 
 
 }
