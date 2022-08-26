@@ -114,6 +114,6 @@ describe('CalculoComponent', () => {
     const operacionSerie= (numeroFibonacci*n/numeroTriangular*n)*numeroPrimo
     expect(operacionSerie).toEqual(66.66666666666667)
   });
-  
+  //test con 1er número primo, fibonacci y el 2do triangular
 
 });
