@@ -33,9 +33,19 @@ export class CalculoComponent implements OnInit {
   }
 
   getNumberTriangular(){
-    const numeroTriangular=3
-    return numeroTriangular
+    const cantidad=this.num//cantidad de numeros triangular
+    let j = 1, numeroTriangular = 1;
+    const numerosTrianguloArray=[];
+        for (let i = 1; i <= cantidad; i++)
+        {        
+            j = j + 1; 
+            numeroTriangular = numeroTriangular + j; 
+            numerosTrianguloArray.push(numeroTriangular);
+        }
+    //const numeroTriangular=3 
+    return numerosTrianguloArray[1] //se pasa 2do número de array
   }
+
   getNumberPrimo(){
   const numerosPrimosArray = [];
   const cantidad=this.num//cantidad de numeros primos que tendrá el array
@@ -58,5 +68,6 @@ export class CalculoComponent implements OnInit {
     return num !== 1;
   }
  
+
 
 }
