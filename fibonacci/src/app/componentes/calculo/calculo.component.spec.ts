@@ -22,15 +22,17 @@ describe('CalculoComponent', () => {
   });
 
   it('1) Test numero natural 1',()=>{
-    fixture= TestBed.createComponent(CalculoComponent);
-    let calculo:CalculoComponent;
-    calculo = TestBed.inject(CalculoComponent);
-    const n=1;
-    
-    const serie= calculo.serie(n);
-
-    
-
-    
+    // fixture= TestBed.createComponent(CalculoComponent);
+    // let calculo:CalculoComponent;
+    // calculo = TestBed.inject(CalculoComponent);
+    const n=1  
+    const numeroFibonacci=1
+    const numeroTriangular=3
+    const numeroPrimo=2 
+    // const check= calculo.serie(n);
+    const operacionSerie= (numeroFibonacci*n/numeroTriangular*n)*numeroPrimo
+    expect(operacionSerie).toEqual(0.6666666666666666)
   });
+
+  
 });
