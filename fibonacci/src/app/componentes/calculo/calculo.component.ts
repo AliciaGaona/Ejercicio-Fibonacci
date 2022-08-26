@@ -11,5 +11,6 @@ export class CalculoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  serie(n:number){}
 
 }
