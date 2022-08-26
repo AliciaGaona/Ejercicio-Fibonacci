@@ -20,4 +20,17 @@ describe('CalculoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('1) Test numero natural 1',()=>{
+    fixture= TestBed.createComponent(CalculoComponent);
+    let calculo:CalculoComponent;
+    calculo = TestBed.inject(CalculoComponent);
+    const n=1;
+    
+    const serie= calculo.serie(n);
+
+    
+
+    
+  });
 });
