@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { VistaPrincipalComponent } from './componentes/vista-principal/vista-principal.component';
 
 const routes: Routes = [
-  {path:'', redirectTo:'home', pathMatch:'full'},
-  {path:'home', component:AppComponent}
+  {path:'', redirectTo:'PrincipalNumeros', pathMatch:'full'},
+  {path:'PrincipalNumeros', component:VistaPrincipalComponent}
 ];
 
 @NgModule({
@@ -12,3 +12,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents=[VistaPrincipalComponent]
