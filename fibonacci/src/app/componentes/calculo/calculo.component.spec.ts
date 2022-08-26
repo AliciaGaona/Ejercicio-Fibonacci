@@ -78,5 +78,23 @@ describe('CalculoComponent', () => {
     const operacionSerie= (numeroFibonacci*n/numeroTriangular*n)*numeroPrimo
     expect(operacionSerie).toEqual(24)
   });
+
+  it('7) Test numero natural 7',()=>{
+    const n=7
+    const numeroFibonacci=1
+    const numeroTriangular=3
+    const numeroPrimo=2 
+    const operacionSerie= (numeroFibonacci*n/numeroTriangular*n)*numeroPrimo
+    expect(operacionSerie).toEqual(32.66666666666667)
+  });
+
+  it('8) Test numero natural 8',()=>{
+    const n=8
+    const numeroFibonacci=1
+    const numeroTriangular=3
+    const numeroPrimo=2 
+    const operacionSerie= (numeroFibonacci*n/numeroTriangular*n)*numeroPrimo
+    expect(operacionSerie).toEqual(42.666666666666664)
+  });
   
 });
