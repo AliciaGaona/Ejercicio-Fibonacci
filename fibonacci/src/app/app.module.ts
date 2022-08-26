@@ -6,13 +6,15 @@ import { FormularioPrincipalComponent } from './componentes/formulario-principal
 import { VistaPrincipalComponent } from './componentes/vista-principal/vista-principal.component';
 import { CalculoComponent } from './componentes/calculo/calculo.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './componentesGenerales/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioPrincipalComponent,
     VistaPrincipalComponent,
-    CalculoComponent
+    CalculoComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
