@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-calculo',
@@ -6,15 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculo.component.css']
 })
 export class CalculoComponent implements OnInit {
-
+  @Input() numeroForm:any=0;
   num =2
   constructor() { }
 
   ngOnInit(): void {
-    this.serie(1);
+  let serieN= this.serie(1);
   }
 
-  serie(n:number){
+  serie(n:any){       
+    console.log(n+ "llegue a calculo")
     const numeroFibonacci=this.getNumberTriangular()
     const numeroTriangular=this.getNumberPrimo()
     const numeroPrimo=this.getNumberFibonacci()
@@ -24,6 +26,8 @@ export class CalculoComponent implements OnInit {
     const operacion1=numeroFibonacci*n/numeroTriangular*n
     const operacionSerie= operacion1*numeroPrimo
     // console.log(n,numeroFibonacci,numeroTriangular,numeroPrimo)
+   // this.numeroForm=operacionSerie   
+    localStorage.setItem("operacionSerie",operacionSerie.toString()) //almacenar el operacionSerie en localstorage
     return operacionSerie
   }
 

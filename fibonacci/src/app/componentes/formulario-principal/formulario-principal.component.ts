@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CalculoComponent } from '../calculo/calculo.component';
@@ -9,7 +9,7 @@ import { CalculoComponent } from '../calculo/calculo.component';
   styleUrls: ['./formulario-principal.component.css']
 })
 export class FormularioPrincipalComponent implements OnInit {
-
+  @Input() numeroForm:any=0;
   formIngresaNumero= new FormGroup({
     numeroForm: new FormControl('', Validators.required)
   })
@@ -20,8 +20,8 @@ export class FormularioPrincipalComponent implements OnInit {
   }
   
   setNumber(form:any){
-    console.log(form.numeroForm)
-    
+    console.log(form.numeroForm) 
+    // return this.calculo.serie(form) 
   }
 
 }

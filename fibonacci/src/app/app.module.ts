@@ -9,6 +9,7 @@ import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './componentesGenerales/header/header.component';
 import { MostrarCalculoComponent } from './componentes/mostrar-calculo/mostrar-calculo.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
